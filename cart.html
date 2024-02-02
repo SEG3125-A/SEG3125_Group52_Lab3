@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart!</title>
+    <!-- External CSS File Link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- <style>
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .cart-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .cart-item {
+            background: white;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .item-name {
+            font-size: 1.2em;
+        }
+        .item-quantity {
+            margin: 10px 0;
+        }
+        .item-price {
+            font-weight: bold;
+        }
+        .update-btn, .remove-btn {
+            background: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        .remove-btn {
+            background: #d9534f;
+        }
+
+        .total-price {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: right;
+            margin: 20px 0;
+        }
+        #signature {
+            text-align: center; 
+            margin-top: 40px; 
+            font-size: 0.9em; 
+            color: #333; 
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+        <h1>FreshMart!</h1>
+    </header>
+    <nav>
+        <a href="customer.html">Customer</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="customer.html">Customer</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    
+
+    <div class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items">
+
+        </div>
+        <div class="total-price" id="cart-total">
+            Total: $0.00
+        </div>
+    </div>
+
+    <!-- <script>
+        // JavaScript for cart functionality
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = ''; 
+
+            let total = 0;
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <div class="item-name">${item.name}</div>
+                        <input type="number" class="item-quantity" value="${item.quantity}">
+                        <div class="item-price">$${(item.price * item.quantity).toFixed(2)}</div>
+                        <button class="update-btn" onclick="updateItem('${item.name}')">Update</button>
+                        <button class="remove-btn" onclick="removeItem('${item.name}')">Remove</button>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('cart-total').textContent = `Total: $${total.toFixed(2)}`;
+        }
+
+        function updateItem(name) {
+            const itemToUpdate = cart.find(item => item.name === name);
+            const newQuantity = parseInt(document.querySelector(`.item-quantity[value="${itemToUpdate.quantity}"]`).value);
+            
+            if (!isNaN(newQuantity) && newQuantity >= 0) {
+                itemToUpdate.quantity = newQuantity;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            } else {
+                alert('Please enter a valid quantity (non-negative number).');
+            }
+        }
+
+        function removeItem(name) {
+            cart = cart.filter(item => item.name !== name);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+
+        updateCartDisplay();
+    </script> -->
+    <div id="signature">
+        <p>Website designed by Eshal Kamran, Ravishan Jayasuriya, and Anas Khelifa</p>
+    </div>   
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FreshMart!</title>
+    <!-- External CSS File Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>FreshMart!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="customer.html">Customer</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="customer.html">Customer</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    
+
+    <div class="container">
+        <div id="customer-info">
+            <h2>Customer Information</h2>
+            <form id="customer-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <h3>Food Preferences:</h3>
+                <div class="radio-option">
+                    <input type="radio" id="none" name="diet" value="" checked>
+                    <label for="none">None</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="vegetarian" name="diet" value="Vegetarian">
+                    <label for="vegetarian">Vegetarian</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="gluten-free" name="diet" value="Gluten Free">
+                    <label for="gluten-free">Gluten Free</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="organic" name="diet" value="Organic">
+                    <label for="organic">Organic</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="meat" name="diet" value="Meat">
+                    <label for="meat">Meat</label>
+                </div>
+
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+
+    <div id="signature">
+        <p>Website designed by Eshal Kamran, Ravishan Jayasuriya, and Anas Khelifa</p>
+    </div>
+    <script src="customer.js"></script>
+</body>
+</html>

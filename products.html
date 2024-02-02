@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart!</title>
+    <!-- External CSS File Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>FreshMart!</h1>
+    </header>
+    <nav>
+        <a href="customer.html">Customer</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="customer.html">Customer</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    
+
+    <div class="sort-options">
+        <p>Here are products tailored to your food preferences.</p>
+        <label for="sort">Products sorted by:</label>
+        <select id="sort" name="sort">
+            <option value="default">Default</option>
+            <option value="price" selected>Price</option>
+        </select>
+        <label for="category">Filter by category:</label>
+        <select id="category" name="category">
+            <option value="All">All</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Meat">Meat</option>
+        </select>
+
+    </div>
+
+    <div class="product-grid" id="product-list">
+        <!-- Static product example (you would remove this once dynamic generation is working) -->
+        <div class="product-item">
+            <img src="images/apple.jpg" alt="Apple" class="product-image">
+            <div class="product-name">Apple</div>
+            <div class="product-price">$0.99</div>
+            <button class="add-to-cart" onclick="addToCart('Apple')">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <div id="signature">
+        <p>Website designed by Eshal Kamran, Ravishan Jayasuriya, and Anas Khelifa</p>
+    </div>
+</body>
+</html>
