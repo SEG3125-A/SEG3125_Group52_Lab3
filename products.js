@@ -19,7 +19,6 @@ var products = [
 
 // New getImagePath function
 function getImagePath(productName) {
-    // Convert the product name to a format that matches your image file names
     const imageName = productName.toLowerCase().replace(/\s+/g, '') + '.jpg';
     return 'images/' + imageName;
 }
@@ -39,7 +38,6 @@ function filterProducts(diet, productList) {
         // If Meat, show 'Chicken', 'Salmon', 'Beef' products
         return productList.filter(product => ['Chicken', 'Salmon', 'Beef'].includes(product.name));
     }
-    // If none or any other preference, show all products
     return productList;
 }
 
