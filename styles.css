@@ -113,16 +113,13 @@ label, input, h2, h3 {
 }
 
 .radio-option input[type="radio"] {
-    margin-right: 10px; /* Adjust the spacing between radio button and label as needed */
+    margin-right: 10px;
 }
 
-/* Ensure that the labels are styled uniformly */
 .radio-option label {
     margin: 0;
     vertical-align: middle;
 }
-
-/* Add any additional styles as needed */
 
 input[type="text"], input[type="email"], input[type="submit"] {
     width: 100%;
